@@ -2,9 +2,9 @@
 
 let shuttleName = "Determination";
 let shuttleSpeed = 17500;
-let kmToMars = 225000000
+let kmToMars = 225000000;
 let kmToMoon = 384400;
-let mpk = 0.621
+let mpk = 0.621;
 
 // Use console.log to print the 'typeof' each variable. Print one item per line.
 

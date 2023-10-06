@@ -8,9 +8,9 @@ console.log("Hello " + nameName);
 
 /*let shuttleName = "Determination";
 let shuttleSpeed = 17500;
-let kmToMars = 225000000
+let kmToMars = 225000000;
 let kmToMoon = 384400;
-let mpk = 0.621
+let mpk = 0.621;
 
 // Use console.log to print the 'typeof' each variable. Print one item per line.
 
@@ -39,6 +39,7 @@ let daysToMoon = hoursToMoon / 24;
 // Print the results of the trip to the moon below
 
 console.log(shuttleName + " will take " + daysToMoon + " to reach the Moon.");
+<<<<<<< HEAD
 
 
 
@@ -51,3 +52,5 @@ let name = "Cam";
 let age = 23;
 let fruit = "Banana";*/
 
+=======
+>>>>>>> 891068dfba8e282a6da430b63f02ffff799dc05b

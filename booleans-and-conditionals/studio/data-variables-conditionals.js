@@ -25,7 +25,7 @@ if (astronautCount <= 7){
     allClear += 1
 } else if (astronautCount > 7) {
     allClear += 0
-}
+};
 
 // add logic below to verify all astronauts are ready
 
@@ -33,7 +33,7 @@ if (astronautStatus === "Ready"){
     allClear += 1
 } else if(astronautCount !== "Ready"){
     allClear += 0
-}
+};
 
 // add logic below to verify the total mass does not exceed the maximum limit of 850000
 
@@ -41,7 +41,7 @@ if (totalMassKg < maximumMassLimit){
     allClear += 1
 } else if (totalMassKg >= maximumMassLimit){
     allClear += 0
-}
+};
 
 // add logic below to verify the fuel temperature is within the appropriate range of -150 and -300
 
@@ -49,7 +49,7 @@ if (fuelTempCelsius > minimumFuelTemp && fuelTempCelsius < maximumFuelTemp) {
     allClear += 1
 } else if (fuelTempCelsius < minimumFuelTemp && fuelTempCelsius > maximumFuelTemp){
     allClear += 0
-}
+};
 
 // add logic below to verify the fuel level is at 100%
 
@@ -74,7 +74,7 @@ if (weatherStatus === "clear"){
 if (allClear === 6){
     console.log("All systems are a go!")
 } else {
-    console.log("uhh")
+    console.log("oops someone forgot to plug in the shuttle batery last night.")
 }
 
 console.log("Date: " + date);

@@ -1,6 +1,12 @@
+const input = require('readline-sync');
+let nameName = input.question("Whats your name");
+console.log("Hello " + nameName);
+
+
+
 // Declare and assign the variables below
 
-let shuttleName = "Determination";
+/*let shuttleName = "Determination";
 let shuttleSpeed = 17500;
 let kmToMars = 225000000
 let kmToMoon = 384400;
@@ -33,3 +39,15 @@ let daysToMoon = hoursToMoon / 24;
 // Print the results of the trip to the moon below
 
 console.log(shuttleName + " will take " + daysToMoon + " to reach the Moon.");
+
+
+
+
+
+
+
+//class exercise
+let name = "Cam";
+let age = 23;
+let fruit = "Banana";*/
+

@@ -23,3 +23,17 @@
 /*Exercise #5: Output the result with the phrase, “The shuttle gained an altitude of ___ km.”
 
 If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”*/
+
+
+
+
+
+// for (initial expression; loop condition; update expression) {
+//   loop body
+// }
+
+
+
+for (let i = 0; i <= 51; i++) {
+  console.log(i)
+}

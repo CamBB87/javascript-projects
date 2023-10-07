@@ -1,11 +1,16 @@
-// Declare and assign the variables below
 
-// Use console.log to print the 'typeof' each variable. Print one item per line.
+let day = "thursday";
+day = 32.5;
+day = 9;
+console.log(day);
 
-// Calculate a space mission below
+console.log(1 + 5 % 3);
+console.log(2 ** 2 ** 3 * 3);
+console.log(16 - 2 * 5 / 3 + 1);
 
-// Print the results of the space mission calculations below
+const input = require('readline-sync');
 
-// Calculate a trip to the moon below
+let info = input.question("Please enter your age: ");
+//The user enters 25.
 
-// Print the results of the trip to the moon below
+console.log(typeof info);

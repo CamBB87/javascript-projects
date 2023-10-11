@@ -25,4 +25,4 @@ element1.push(threeD);
 console.log(table);
 console.log(table[1]);
 console.log(table[0][2]);
-console.log(table[0][4][1]); //this line doesnt work, will ask about it in class. 
+console.log(table[0][3][1]); 

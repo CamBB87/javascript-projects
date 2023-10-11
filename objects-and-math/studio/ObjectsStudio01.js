@@ -1,3 +1,6 @@
+//declared variables
+
+
 // Code your selectRandomEntry function here:
 
 

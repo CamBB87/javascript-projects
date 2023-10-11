@@ -19,3 +19,6 @@ function makeLine(size, length) {
 };
 
 console.log(makeLine(4, 7))
+
+
+

@@ -74,7 +74,7 @@ if (weatherStatus === "clear"){
 if (allClear === 6){
     console.log("All systems are a go!")
 } else {
-    console.log("oops someone forgot to plug in the shuttle batery last night.")
+    console.log("oops someone forgot to plug in the shuttle battery last night.")
 }
 
 console.log("Date: " + date);

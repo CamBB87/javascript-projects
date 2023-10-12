@@ -20,29 +20,35 @@ function reverseCommas() {
 
 //3)
 function semiDash() {
-	let check;
+	let check = ";";
 	let output;
 //TODO: write the code required for this step
-
+	if (strings[1].includes(check)) {
+		output = strings[1].split(check).sort().join("-");
+	}
   
 	return output;
 }
 
 //4)
 function reverseSpaces() {
-	let check;
+	let check = " ";
 	let output;
   //TODO: write the code required for this step
-
+	if (strings[2].includes(check)) {
+		output = strings[2].split(check).reverse().sort().join(" ")
+	}
 	return output;
 }
 
 //5)
 function commaSpace() {
-	let check;
+	let check = ", ";
 	let output;
 	//TODO: write the code required for this step
-  
+   if (strings[3].includes(check)) {
+	output = strings.split(check)
+   }
 	return output;
 }
 

@@ -28,7 +28,7 @@ let shuttleName = "Determination";
 let shuttleSpeed = 17500;
 let kmToMars = 225000000;
 let kmToMoon = 384400;
-let mpk = 0.621;*/
+let mpk = 0.621;
 
 // Use console.log to print the 'typeof' each variable. Print one item per line.
 
@@ -56,8 +56,4 @@ let mpk = 0.621;*/
 
 // Print the results of the trip to the moon below
 
-<<<<<<< HEAD
 //console.log(shuttleName + " will take " + daysToMoon + " to reach the Moon.")
-=======
-console.log(shuttleName + " will take " + daysToMoon + " to reach the Moon.");
->>>>>>> 9eea5177bae775e2627ca99f84e5860c2de1bd2c

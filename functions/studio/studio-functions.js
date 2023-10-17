@@ -9,6 +9,23 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
+//use typeOf method to see is the string is whatever
+function reverseCharacter(str) {
+    let reverse = [];
+    if (typeof str === "string") {
+         for (let i = str.length-1; i > -1; i--) {
+            reverse.push(str[i]);
+        };
+    } else if (typeof str === "number") { //i think the problem is here, either i cant push numbers into an array or its the if statement peramiters 
+        str = String(str)
+        for (let i = str.length; i > -1; i--) {
+            reverse.push((str[i]));
+        };
+    };
+    reverse = reverse.join(``);
+    return reverse;
+}
+console.log(reverseCharacter(1234));
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.

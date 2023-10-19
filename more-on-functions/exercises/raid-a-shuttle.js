@@ -24,9 +24,23 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
-/* Steal some fuel from the shuttle:
- * /
- 
+// Steal some fuel from the shuttle:
+
+let pool = function(item) { 
+  if (fuelLevel > 100000) {
+    for (i = fuelLevel; fuelLevel - 1 > 100000; i--) { 
+    fuelLevel = fuelLevel - 1
+    };
+  } else if (fuelLevel > 50000) { 
+    for (i = fuelLevel; fuelLevel - 1 > 50000; i--) { 
+      fuelLevel = fuelLevel - 1
+      };
+  } else {
+    fuelLevel = 0
+  };
+  return fuelLevel;
+};
+ console.log(pool(fuelLevel));
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
 
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
@@ -35,9 +49,20 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //d). Decide where to best place your function call to gather our new fuel.
 
-/* Next, liberate some of that glorious cargo.
- * /
+//Next, liberate some of that glorious cargo.
+let stolenArr = [];
+let loop = function(arr) {
 
+  //stolenArr.splice(0, 2,)
+  stolenArr = arr.splice(0, 2, `duck`); 
+  
+  // stolenArr.push(arr[1])
+  //stolenArr += arr.splice(1, 1, `duck`);
+  //stolenArr.push(arr.splice());
+  return stolenArr;
+};
+console.log(loop(cargoHold));
+console.log(cargoHold);
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
 
 //b). You need to swipe two items from the cargo hold. Choose well. Stealing water ain’t gonna get us rich. Put the swag into a new array and return it from the function.
@@ -46,12 +71,11 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 //d). Don’t get hasty, matey! Remember to test your function.
 
-/* Finally, you need to print a receipt for the accountant. Don’t laugh! That genius knows MATH and saves us more gold than you can imagine.
- * /
+// Finally, you need to print a receipt for the accountant. Don’t laugh! That genius knows MATH and saves us more gold than you can imagine.
+
  
 //a). Define a function called irs that can take fuelLevel and cargoHold as arguments.
 	
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-

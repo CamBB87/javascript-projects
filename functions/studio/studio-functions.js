@@ -9,23 +9,27 @@
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
 
-//use typeOf method to see is the string is whatever
+//use typeof method to see is the string is whatever
 function reverseCharacter(str) {
     let reverse = [];
     if (typeof str === "string") {
          for (let i = str.length-1; i > -1; i--) {
             reverse.push(str[i]);
         };
-    } else if (typeof str === "number") { //i think the problem is here, either i cant push numbers into an array or its the if statement peramiters 
+        reverse = reverse.join(``);
+    } else if (typeof str === "number") { 
         str = String(str)
         for (let i = str.length; i > -1; i--) {
             reverse.push((str[i]));
         };
+        reverse = reverse.join(``)
+        reverse = Number(reverse);
     };
-    reverse = reverse.join(``);
+    
     return reverse;
 }
-console.log(reverseCharacter(1234));
+console.log(reverseCharacter(`pool`));
+
 // Part Two: Reverse Digits
 
 // 1. Add an if statement to reverseCharacters to check the typeof the parameter.
@@ -43,9 +47,30 @@ console.log(reverseCharacter(1234));
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
+let array = [];
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
+
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+function reverse(arr) {
+
+    for (i = 0; i < arr.length; i++) {
+        
+        if (typeof arr[i] === "string") {
+            array.push(arr[i].split(``).reverse().join(``))
+        } else if (typeof arr[i] === "number") {
+            arr[i] = String(arr[i]);
+            arr[i] = arr[i].split('').reverse().join(``);
+            arr[i] = Number(arr[i]);
+            array.push(arr[i]);
+        };
+    };
+    return array;
+}
+
+console.log(reverse(arrayTest3))
+
 
 // Bonus Missions
 
@@ -58,6 +83,7 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
+
 
 // Area of rectangle equal to length x width
 

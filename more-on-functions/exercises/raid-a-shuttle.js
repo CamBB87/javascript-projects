@@ -26,19 +26,16 @@ console.log("Hold status: " + holdStatus(cargoHold));
 
 // Steal some fuel from the shuttle:
 
-let pool = function(item) { 
-  if (fuelLevel > 100000) {
-    for (i = fuelLevel; fuelLevel - 1 > 100000; i--) { 
-    fuelLevel = fuelLevel - 1
-    };
-  } else if (fuelLevel > 50000) { 
-    for (i = fuelLevel; fuelLevel - 1 > 50000; i--) { 
-      fuelLevel = fuelLevel - 1
-      };
+let pool = function(item) {
+  let fuelStolen = 0; 
+  if (checkFuel(item) === `green`) {
+    fuelStolen = item - 100001;
+  } else if (checkFuel(item) === `else`) { 
+    fuelStolen = item - 50001;
   } else {
-    fuelLevel = 0
+    fuelStolen = item;
   };
-  return fuelLevel;
+  return fuelStolen;
 };
  console.log(pool(fuelLevel));
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
@@ -52,17 +49,15 @@ let pool = function(item) {
 //Next, liberate some of that glorious cargo.
 let stolenArr = [];
 let loop = function(arr) {
-
-  //stolenArr.splice(0, 2,)
-  stolenArr = arr.splice(0, 2, `duck`); 
   
-  // stolenArr.push(arr[1])
-  //stolenArr += arr.splice(1, 1, `duck`);
-  //stolenArr.push(arr.splice());
+  stolenArr = arr.splice(0, 2, `duck`, `beans`);
+
   return stolenArr;
 };
 console.log(loop(cargoHold));
 console.log(cargoHold);
+let arr = loop(cargoHold)
+console.log(`words ${arr[1]}`)
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
 
 //b). You need to swipe two items from the cargo hold. Choose well. Stealing water ain’t gonna get us rich. Put the swag into a new array and return it from the function.

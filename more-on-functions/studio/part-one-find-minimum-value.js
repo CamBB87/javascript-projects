@@ -3,8 +3,19 @@
 //Sample arrays for testing:
 let nums1 = [5, 10, 2, 42];
 let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
-let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 1];
 
+function arrNum(arr) {
+    let min = [];
+    for (i = 0; i <= arr.length; i++) {
+        if (arr[i] < arr[i + 1] && typeof arr[i + 1] === `number`) {
+            min.splice(0, 1, arr[i]);
+        } else if (typeof arr[i + 1] === `number`){
+            min.splice(0, 1, arr[i + 1]);
+        }
+    }
+    return min;
+}
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(/* your code here */);
+console.log(arrNum(nums3));

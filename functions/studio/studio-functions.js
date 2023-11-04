@@ -49,7 +49,6 @@ console.log(reverseCharacter(`pool`));
 
 let array = [];
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
-
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
 
@@ -58,12 +57,12 @@ function reverse(arr) {
     for (i = 0; i < arr.length; i++) {
         
         if (typeof arr[i] === "string") {
-            array.push(arr[i].split(``).reverse().join(``))
+            array.unshift(arr[i].split(``).reverse().join(``))
         } else if (typeof arr[i] === "number") {
             arr[i] = String(arr[i]);
             arr[i] = arr[i].split('').reverse().join(``);
             arr[i] = Number(arr[i]);
-            array.push(arr[i]);
+            array.unshift(arr[i]);
         };
     };
     return array;

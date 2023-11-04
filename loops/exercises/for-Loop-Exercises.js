@@ -47,11 +47,11 @@ console.log(`\n`)
   let array = [2, 3, 13, 18, -5, 38, -10, 11, 0, 104];
   let evenArr = [];
   let oddArr = [];
-  for (let item in array) {
-    if (array[item] === 2 % 0) {
-      evenArr += array[item];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      evenArr.push(array[i]);
     } else {
-      oddArr += array[item];
+      oddArr.push(array[i]);
     };
   };
 console.log(evenArr);

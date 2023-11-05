@@ -37,7 +37,7 @@ let pool = function(item) {
   };
   return fuelStolen;
 };
- console.log(pool(fuelLevel));
+//  console.log(pool(fuelLevel));
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
 
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
@@ -54,10 +54,10 @@ let loop = function(arr) {
 
   return stolenArr;
 };
-console.log(loop(cargoHold));
-console.log(cargoHold);
-let arr = loop(cargoHold)
-console.log(`words ${arr[1]}`)
+// console.log(loop(cargoHold));
+// console.log(cargoHold);
+// let arr = loop(cargoHold)
+// console.log(`words ${arr[1]}`)
 //a). Define another anonymous function with an array as a parameter, and set it equal to another innocent variable.
 
 //b). You need to swipe two items from the cargo hold. Choose well. Stealing water ain’t gonna get us rich. Put the swag into a new array and return it from the function.
@@ -74,3 +74,10 @@ console.log(`words ${arr[1]}`)
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
+
+function irs(fuel, hold) {
+  let fuelStolen = pool(fuel);
+  let itemss = loop(hold);
+  return console.log(`Raided ${fuelStolen} kg of fuel from the tanks, and stole ${itemss[0]} and ${itemss[1]} from the cargo hold.`);
+};
+console.log(irs(fuelLevel, cargoHold))

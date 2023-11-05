@@ -21,7 +21,7 @@ function findMinValue(arr){
 //Your function here...
 function sortNum(arr) {
   let sorted = [];
-  sorted = arr.sort(function (a, b) { return a - b });
+  sorted = arr.sort(function (a, b) { return a - b }); //need explaining for function
   return sorted;
 }
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
